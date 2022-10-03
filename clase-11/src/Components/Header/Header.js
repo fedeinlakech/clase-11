@@ -2,10 +2,21 @@ import React from "react";
 import "./Header.css";
 
 export default function Header(props) {
+  const myVideoList = props.source.map((image) => {
+    return <img src={image.url} width={image.width} alt={image.alt} />;
+  });
+
+  const myFilteredVideoList = myVideoList.filter(
+    (image) => image.props.width < 500
+  );
+
   return (
     <header className="Header">
       <p>Componente: Header</p>
-      <img src={props.src} width={props.width} className="logo" alt="logo" />
+      <h2>Fotos de los Planetas del Sistema Solar</h2>
+      <div className="planetas">{myVideoList}</div>
+      <h2>Fotos anteriores filtradas: menos de 500 de width</h2>
+      <div className="planetas">{myFilteredVideoList}</div>
       <h1>TIGRE y LIVERPOOL, las maravillas del mundo moderno.</h1>
       <div className="links">
         <a
@@ -31,4 +42,4 @@ export default function Header(props) {
 
 Header.defaultProps = {
   size: 600,
-}
+};
