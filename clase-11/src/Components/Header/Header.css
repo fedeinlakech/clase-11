@@ -1,0 +1,33 @@
+.Header {
+    background-color: rgb(36, 27, 16);
+    padding-bottom: 25px;
+}
+
+.Header p {
+    font-size: 25px;
+    font-weight: bold; 
+    color: rgb(167, 197, 236);
+    padding-top: 10px;
+
+}
+
+
+.Header h1 {
+    font-size: 35px;
+    font-weight: 1000;
+    color: rgb(255, 237, 230);
+}
+
+.Header .logo {
+    box-shadow: 10px 10px 10px #e67e7e, -10px -10px 10px #e67e7e;
+}
+
+.Header .links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Header .Header__link {
+    color: red;
+    text-decoration: none;
+}
